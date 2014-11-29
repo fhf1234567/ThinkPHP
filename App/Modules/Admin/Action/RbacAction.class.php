@@ -16,6 +16,9 @@ class RbacAction extends Action{
 
     //用户列表
     public function index(){
+        $result = D('UserRelation')->field('password',true)->relation(true)->select();
+        p($result);
+        die();
         $this->display();
     }
 
